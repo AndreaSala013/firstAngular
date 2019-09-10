@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
+  visibile:boolean=true;
+
   constructor() { }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.visibile=false;
+    }, 3000);
   }
 
 }

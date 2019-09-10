@@ -6,6 +6,7 @@ import { CardComponent } from './card/card.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { RaitingsComponent } from './raitings/raitings.component';
 import { StarComponent } from './star/star.component';
+import { CustomListItemComponent } from './custom-list-item/custom-list-item.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,9 @@ import { StarComponent } from './star/star.component';
     ListaCardComponent,
     CardComponent,
     RaitingsComponent,
-    StarComponent
+    StarComponent,
+    ListaCardComponent,
+    CustomListItemComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +27,8 @@ import { StarComponent } from './star/star.component';
     ListaCardComponent,
     CardComponent,
     RaitingsComponent,
-    StarComponent
+    StarComponent,
+    CustomListItemComponent
   ]
 })
 export class SharedModule { }
