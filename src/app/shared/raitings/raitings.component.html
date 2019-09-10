@@ -1,0 +1,8 @@
+<div class="row">
+    <div  *ngFor="let item of arrayOfStars">
+        <app-star [isColored]="item.isClicked" 
+        (mouseenter)="mouseEnter(item)" 
+        (mouseleave) ="mouseLeave()"
+        (click)="clickStar(item)"></app-star>
+    </div>
+</div>
