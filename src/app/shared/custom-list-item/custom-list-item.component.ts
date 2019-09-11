@@ -13,8 +13,9 @@ hover : boolean = false;
 
   statusStr : string;
 
+  isBoltVisible:boolean = true;
   isPlayVisible: boolean = false; 
-  isStopVisible : boolean = true;
+  isStopVisible : boolean = false;
 
   constructor() { }
 
@@ -24,13 +25,22 @@ hover : boolean = false;
 
   buttonPlayClick(){
     this.isStopVisible = true;
+    this.isBoltVisible = false;
     this.isPlayVisible = false;
     this.changeStatusStr();
   }
 
   buttonStopClick(){
     this.isStopVisible = false;
+    this.isBoltVisible = false;
     this.isPlayVisible = true;
+    this.changeStatusStr();
+  }
+
+  buttonBoltClick(){
+    this.isStopVisible = true;
+    this.isBoltVisible = false;
+    this.isPlayVisible = false;
     this.changeStatusStr();
   }
 
@@ -38,8 +48,10 @@ hover : boolean = false;
     if(this.isPlayVisible){
       this.statusStr = "Stopped";
     }
-    else{
+    else if(this.isStopVisible){
       this.statusStr = "Running";
+    }else if(this.isBoltVisible){
+      this.statusStr = "Not present";
     }
   }
     public stopPropagationHover(event: any): void

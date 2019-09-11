@@ -20,5 +20,10 @@
                             <mdb-icon fas icon="stop" ></mdb-icon>
                         </button>
             </div>
+            <div *ngIf="isBoltVisible" class="mt-2 text-center">
+                <button mdbBtn (click)="buttonBoltClick()" class="btn-sm" type="button" color="yellow" mdbWavesEffect>
+                        <mdb-icon fas icon="bolt" ></mdb-icon>
+                    </button>
+        </div>
     </div>
 </div>
