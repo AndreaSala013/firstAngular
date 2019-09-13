@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { Observable, Subscription, interval, of } from 'rxjs';
+import { tap, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-observable',
@@ -8,11 +9,22 @@ import { Observable, Subscription } from 'rxjs';
 })
 export class ObservableComponent implements OnInit {
 
+  obOf$;
+  ob$;
+
   sub : Subscription;
 
   constructor() { }
 
   ngOnInit() {
+
+    this.obOf$ = interval(2000).pipe();
+    
+    this.ob$ = of(1,2,3,4,5,6).pipe(
+      tap(value=>console.log("pre map " + value)),
+      map(value => value++)
+    ).subscribe();
+
     this.sub = this.createObservable().subscribe(
       value=>console.log(value),
       error=>console.log(error),

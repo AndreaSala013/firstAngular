@@ -11,7 +11,7 @@ import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './core/navbar/navbar.component';
 import { TestModule } from './test/test.module';
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
@@ -26,7 +26,9 @@ import { TestModule } from './test/test.module';
     SharedModule,
     HttpClientModule,
     MDBBootstrapModule.forRoot(),
-    TestModule
+    TestModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
