@@ -1,16 +1,14 @@
 <!-- Default form login -->
-<form [formGroup]="loginForm" class="text-center border border-light p-5 bl-5 br-5" action="#!">
+<!-- <form [formGroup]="loginForm" class="text-center border border-light p-5 bl-5 br-5" action="#!">
 
     <p class="h4 mb-4">Login</p>
 
-    <!-- Email -->
     <input formControlName="usernameInput" type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Username">
 
-    <!-- Password -->
     <input formControlName="passwordInput" type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
 
-    <!-- Sign in button -->
     <button [disabled]="!loginForm.valid" class="btn btn-info btn-block my-4" type="submit">Sign in</button>
 
-</form>
+</form> -->
 <!-- Default form login -->
+<app-form (sendForm)="getForm($event)"></app-form>

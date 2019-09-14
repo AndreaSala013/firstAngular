@@ -8,15 +8,20 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class ContattiPageComponent implements OnInit {
 
-  loginForm: FormGroup;
+  //loginForm: FormGroup;
 
   constructor() { }
 
   ngOnInit() {
-    this.loginForm = new FormGroup({
+    /*this.loginForm = new FormGroup({
       usernameInput: new FormControl("",Validators.required),
       passwordInput:new FormControl("",Validators.required)
-    });
+    });*/
+  }
+
+  getForm(formValue){
+    console.log("Padre");
+    console.log(formValue);
   }
 
 }
